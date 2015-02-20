@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)file:///media/jose/USB/OSIRIS/Pruebas/terremoto/index.html -->
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <title>Osiris</title>
+    <meta name="author" content="Mr Paradoja">
+    <meta name="title" content="Osiris">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <script src="http://www.geogebratube.org/scripts/deployggb.js"></script>
+    <script src="./acertijos/Acertijo1.js"></script>
+    <script src="./acertijos/Acertijo2.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="./public/aplicacion.js"></script>
+    <script src="public/jquery.timeTo.min.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/timeTo.css">
+    <style type="text/css">
+#Contenedor1 {  
+  position: relative;  
+  background-image: url("img/fondo.png");  
+  width: 1200px;  
+  top: 50px;  
+  border-top-color: #1224dd;  
+  border-right-color: #1224dd;  
+  border-bottom-color: #1224dd;  
+  border-left-color: #1224dd;  
+  border-top-style: solid;  
+  border-right-style: solid;  
+  border-bottom-style: solid;  
+  border-left-style: solid;  
+  margin-top: 0px;  
+  margin-right: auto;  
+  margin-bottom: 0px;  
+  margin-left: auto;
+}
+
+#contenedor-papiro {  
+  position: relative;  
+  left: 100px;  
+  top: 100px;
+}
+
+#comentario {  
+  left: 200px;  
+  top: 450px;  
+  border-top-color: #98b539;  
+  border-right-color: #98b539;  
+  border-bottom-color: #98b539;  
+  border-left-color: #98b539;  
+  border-top-style: solid;  
+  border-right-style: solid;  
+  border-bottom-style: solid;  
+  border-left-style: solid;  
+  position: absolute;  
+  font-size: large;  
+  font-weight: bold;  
+  font-style: italic;  
+  width: 600px;  
+  height: 100px;  
+  font-family: "Comic Sans MS";  
+  background-color: #ffffcc;
+}
+
+absolute #papiro {  
+  top: 100px;  
+  z-index: 1;  
+  position: relative;
+}
+
+#ojo {  
+  z-index: 2;  
+  position: absolute;  
+  width: 113px;  
+  height: 83px;  
+  top: 120px;  
+  left: 709px;
+}
+
+#ojo:hover {  
+  width: 130px;  
+  height: 100px;  
+  top: 100px;  
+  left: 703px;  
+  border-top-color: #090015;  
+  border-right-color: #090015;  
+  border-bottom-color: #090015;  
+  border-left-color: #090015;  
+  border-top-style: solid;  
+  border-right-style: solid;  
+  border-bottom-style: solid;  
+  border-left-style: solid;  
+  cursor: pointer;
+}
+
+#balanza {  
+  z-index: 2;  
+  position: absolute;  
+  width: 257px;  
+  height: 151px;  
+  top: 120px;  
+  left: 709px;
+}
+
+#balanza:hover {  
+ width: 270px;  
+  height: 161px;  
+  top: 110px;  
+  left: 689px;  
+  border-top-color: #090015;  
+  border-right-color: #090015;  
+  border-bottom-color: #090015;  
+  border-left-color: #090015;  
+  border-top-style: solid;  
+  border-right-style: solid;  
+  border-bottom-style: solid;  
+  border-left-style: solid;  
+  cursor: pointer;
+}
+
+</style> <style type="text/css">
+#esfinge {  
+  position: absolute;  
+  border-top-color: #d10a10;  
+  border-right-color: #d10a10;  
+  border-bottom-color: #d10a10;  
+  border-left-color: #d10a10;  
+  border-top-style: none;  
+  border-right-style: none;  
+  border-bottom-style: none;  
+  border-left-style: none;
+}
+
+#papiro {  
+  border-top-color: #0c0201;  
+  border-right-color: #0c0201;  
+  border-bottom-color: #0c0201;  
+  border-left-color: #0c0201;  
+  border-top-style: solid;  
+  border-right-style: solid;  
+  border-bottom-style: solid;  
+  border-left-style: solid;
+}
+
+#geogebra-contenedor {  
+  position: relative;  
+  width: 850px;  
+  top: 50px;  
+  border-top-color: #1224dd;  
+  border-right-color: #1224dd;  
+  border-bottom-color: #1224dd;  
+  border-left-color: #1224dd;  
+  border-top-style: solid;  
+  border-right-style: solid;  
+  border-bottom-style: solid;  
+  border-left-style: solid;  
+  margin-top: 0px;  
+  margin-right: auto;  
+  margin-bottom: 0px;  
+  margin-left: auto;
+}
+
+#ayuda-contenedor {  
+  position: relative;  
+  width: 850px;  
+  height: 600px;  
+  top: 50px;  
+  border-top-color: #1224dd;  
+  border-right-color: #1224dd;  
+  border-bottom-color: #1224dd;  
+  border-left-color: #1224dd;  
+  border-top-style: solid;  
+  border-right-style: solid;  
+  border-bottom-style: solid;  
+  border-left-style: solid;  
+  margin-top: 0px;  
+  margin-right: auto;  
+  margin-bottom: 0px;  
+  margin-left: auto;  
+  overflow: hidden;  
+  background-color: #adb0ff;
+}
+
+#esfinge:hover {  
+  border-top-color: #5522d1;  
+  border-right-color: #5522d1;  
+  border-bottom-color: #5522d1;  
+  border-left-color: #5522d1;  
+  border-top-style: solid;  
+  border-right-style: solid;  
+  border-bottom-style: solid;  
+  border-left-style: solid;  
+  cursor: help;
+}
+
+#ayuda {  
+  position: absolute;  
+  z-index: 5;
+}
+
+#ayuda:hover {  
+  cursor: help;
+}
+
+#icono_cerrar {  
+  position: absolute;
+}
+
+#icono_cerrar:hover {  
+  cursor: pointer;
+}
+
+#tiempo {  
+  z-index: 6;  
+  position: absolute;
+}
+
+#cuerpo {  
+  background-image: url("img/mosaico.jpg");
+}
+
+    
+#CierraVideo {  
+  background-color: #1372d4;  
+  font-weight: bold;  
+  font-size: 24px;
+}
+    #video-contenedor {  
+      position: relative;  
+ 
+  width:850px;
+      height: 500px;
+  top: 50px;  
+  
+  margin-top: 0px;  
+  margin-right: auto;  
+  margin-bottom: 0px;  
+  margin-left: auto;
+  
+}
+
+</style> </head>
+  <body id="cuerpo" style="    height: 800px; background-color: #b9e8e8; display: inherit;">
+    <header style="
+    text-align: center;    font-size: -webkit-xxx-large; font-size: xx-large;   font-family: cursive;">
+      EL JUICIO DE OSIRIS A TRAVÉS DEL LIBRO DE LOS MUERTOS </header>
+    <div id="geogebra-contenedor"> </div>
+    <div id="ayuda-contenedor">
+      <p>Aquí tendrá que ir todo el texto de ayuda del juego.....<img id="icono_cerrar"
+          style="width: 72px; height: 72px; top: 527px; left: 780px;" alt="cerrar"
+          src="img/icono_cerrar.png" onclick="cierra_ayuda();"></p>
+    </div>
+    <div style="height: 700px;" class="Contenedor" id="Contenedor1">
+      <div style="top: 27px; left: 865px; width: 235px; height: 47px;" id="tiempo">
+        <p>HOLA</p>
+      </div>
+      <div id="contenedor-papiro" class="fondo1" style="width: 1000px; left: 100px;">
+        <img src="img/papiro.png" id="papiro" height="428px" width="1000px"> <img
+          src="img/ojo.png" id="ojo" class="superpuestas" onmouseover="playclip1()">
+        <img style="top: 214px; left: 160px;" src="img/balanza.png" id="balanza"
+          class="superpuestas" onmouseover="playclip2()"> &nbsp; <img id="ayuda"
+          style="width: 78px; height: 79px; top: -84px; left: -85px;" alt="ayuda"
+          src="img/interrogacion.png" onclick="muestra_ayuda();"><img alt="Esfinge"
+          style="width: 166px; height: 105px; top: 455px; left: 4px;" src="img/esfinge.png"
+          id="esfinge" onmouseover="playclip3()">
+        <div style="top: 450px; left: 179px; width: 823px; height: 115px;" id="comentario">Hola
+          amigos, bienvenidos al videojuego sobre el juicio de Osiris. <br>
+          Lo primero que tedrás que hacer es encontrar las tres primeras
+          pruebas. </div>
+      </div>
+    </div>
+    <div style="text-align: center;" id="video-contenedor"> 
+
+	<video id="video1" controls width="850px">
+
+	<source src="carpeta/intro.webm" video/webm; codecs="vp8, vorbis" />
+	 
+      <div id="CierraVideo"> Finaliza el video</div>
+    </div>
+    <!-- En el caso que existan niveles esto se utilizaría para acceder a tu nivel -->
+    <!-- Esta parte es la referente al video... -->
+  </body>
+</html>

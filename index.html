@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)file:///media/jose/USB/OSIRIS/Pruebas/terremoto/index.html -->
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <title>Osiris</title>
+    <meta name="author" content="Mr Paradoja">
+    <meta name="title" content="Osiris">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <script src="http://www.geogebratube.org/scripts/deployggb.js"></script>
+    <script src="./acertijos/Acertijo1.js"></script>
+    <script src="./acertijos/Acertijo2.js"></script>
+    <script src="./public/jquery.min.js"></script>
+      <script type="application/javascript" src="./public/phaser.min.js"></script>
+    <script src="./public/aplicacion.js"></script>
+    <script src="public/jquery.timeTo.min.js"></script>
+    <script src="./public/processing.min.js"></script>
+      <script type="application/javascript" src="public/game1.js"></script>
+    
+    <style type="text/css">
+@-moz-keyframes latido{
+  from{
+   transform : scale(0.8)
+  }
+  transform : scale(1.1)
+}
+@-webkit-keyframes latido{
+  from{
+   transform : scale(0.8)
+  }
+  transform : scale(1.1)
+}
+    @-moz-keyframes hola-2 { 
+  0% { background-position: 0px 0px; }
+  100% { background-position: -353px 0px; }
+ }   
+    @-webkit-keyframes hola-2 { 
+  0% { background-position: 0px 0px; }
+  100% { background-position: -353px 0px; }
+ }   
+        
+#Contenedor1 {  
+  position: relative;  
+  background-image: url("img/fondo.png");  
+  width: 1200px;  
+  top: 50px;  
+  border-top-color: #dcb381;  
+  border-right-color: #dcb381;  
+  border-bottom-color: #dcb381;  
+  border-left-color: #dcb381;  
+  border-top-style: inset;  
+  border-right-style: inset;  
+  border-bottom-style: inset;  
+  border-left-style: inset;  
+  margin-top: 0px;  
+  margin-right: auto;  
+  margin-bottom: 0px;  
+  margin-left: auto; 
+  border-radius:20px; 
+  -moz-border-radius:20px; /* Firefox */ 
+  -webkit-border-radius:20px; /* Safari y Chrome */ 
+}
+
+#contenedor-papiro {  
+  position: relative;  
+  left: 100px;  
+  top: 100px;  
+  border-top-style: none;  
+  border-right-style: none;  
+  border-bottom-style: none;  
+  border-left-style: none;
+}
+
+#comentario {  
+  left: 200px;  
+  top: 450px;  
+  border-top-color: #ff9900;  
+  border-right-color: #ff9900;  
+  border-bottom-color: #ff9900;  
+  border-left-color: #ff9900;  
+  border-top-style: solid;  
+  border-right-style: solid;  
+  border-bottom-style: solid;  
+  border-left-style: solid;  
+  position: absolute;  
+  font-size: large;  
+  font-weight: bold;  
+  font-style: italic;  
+  width: 600px;  
+  height: 100px;  
+  font-family: "Comic Sans MS";  
+  background-color: #dcb381;
+        border-radius:20px; 
+  -moz-border-radius:20px; /* Firefox */ 
+  -webkit-border-radius:20px; /* Safari y Chrome */ 
+}
+
+absolute #papiro {  
+  top: 100px;  
+  z-index: 1;  
+  position: relative;
+}
+
+#ojo {  
+  z-index: 2;  
+  position: absolute;  
+  width: 60px;  
+  height: 23px;  
+  top: 120px;  
+  left: 709px;
+}
+
+#ojo:hover {  
+  width: 60px;  
+  height: 23px;  
+  top: 120px;  
+  left: 709px;  
+  cursor: pointer;
+    
+
+}
+
+#balanza {  
+  z-index: 2;  
+  position: absolute;  
+  width: 257px;  
+  height: 151px;  
+  top: 120px;  
+  left: 709px;
+}
+
+#balanza:hover {  
+  width: 270px;  
+  height: 161px;  
+  top: 110px;  
+  left: 689px;  
+  border-top-color: #090015;  
+  border-right-color: #090015;  
+  border-bottom-color: #090015;  
+  border-left-color: #090015;  
+  border-top-style: solid;  
+  border-right-style: solid;  
+  border-bottom-style: solid;  
+  border-left-style: solid;  
+  cursor: pointer;
+}
+
+</style> <style type="text/css">
+#esfinge {  
+  position: absolute;  
+  border-top-color: #d10a10;  
+  border-right-color: #d10a10;  
+  border-bottom-color: #d10a10;  
+  border-left-color: #d10a10;  
+  border-top-style: none;  
+  border-right-style: none;  
+  border-bottom-style: none;  
+  border-left-style: none;
+}
+
+#papiro {  
+  border-top-color: white;  
+  border-right-color: white;  
+  border-bottom-color: white;  
+  border-left-color: white;  
+  border-top-style: none;  
+  border-right-style: none;  
+  border-bottom-style: none;  
+  border-left-style: none;
+}
+
+#geogebra-contenedor {  
+  position: relative;  
+  width: 850px;  
+  top: 50px;  
+  border-top-color: #1224dd;  
+  border-right-color: #1224dd;  
+  border-bottom-color: #1224dd;  
+  border-left-color: #1224dd;  
+  border-top-style: solid;  
+  border-right-style: solid;  
+  border-bottom-style: solid;  
+  border-left-style: solid;  
+  margin-top: 0px;  
+  margin-right: auto;  
+  margin-bottom: 0px;  
+  margin-left: auto;
+}
+#game1 {  
+  position: relative;  
+  width: 1000px;  
+  top: 50px;  
+  border-top-color: #3f5345;  
+  border-right-color:#3f5345;  
+  border-bottom-color: #3f5345;  
+  border-left-color: #3f5345;  
+  border-top-style: solid;  
+  border-right-style: solid;  
+  border-bottom-style: solid;  
+  border-left-style: solid;  
+  margin-top: 0px;  
+  margin-right: auto;  
+  margin-bottom: 0px;  
+  margin-left: auto;
+}
+
+#ayuda-contenedor {  
+  position: relative;  
+  width: 850px;  
+  height: 600px;  
+  top: 50px;  
+  border-top-color: #ddc07e;  
+  border-right-color: #ddc07e;  
+  border-bottom-color: #ddc07e;  
+  border-left-color: #ddc07e;  
+  border-top-style: groove;  
+  border-right-style: groove;  
+  border-bottom-style: groove;  
+  border-left-style: groove;  
+  margin-top: 0px;  
+  margin-right: auto;  
+  margin-bottom: 0px;  
+  margin-left: auto;  
+  overflow: hidden;  
+  background-color: #eebe00;  
+  font-size: x-large;  
+  font-style: italic;
+}
+
+#esfinge:hover {  
+  border-top-color: #5522d1;  
+  border-right-color: #5522d1;  
+  border-bottom-color: #5522d1;  
+  border-left-color: #5522d1;  
+  border-top-style: solid;  
+  border-right-style: solid;  
+  border-bottom-style: solid;  
+  border-left-style: solid;  
+  cursor: help;
+}
+
+#ayuda {  
+  position: absolute;  
+  z-index: 5;
+}
+
+#ayuda:hover {  
+  cursor: help;
+}
+
+#piramide {  
+  position: absolute;  
+  z-index: 5;
+}
+
+#cruz {  
+  position: absolute;  
+  z-index: 5;
+ background: url(./img/escarabajo.png) no-repeat left top;
+ margin: 0 auto;
+-moz-animation: hola-2 0.1s steps(2) infinite;    
+-webkit-animation: hola-2 0.1s steps(2) infinite;    
+}
+
+#icono_cerrar {  
+  position: absolute;
+}
+
+#icono_cerrar:hover {  
+  cursor: pointer;
+}
+
+#cuerpo {  
+  background-image: url("img/fondo.png");
+}
+
+#CierraVideo {  
+  -moz-animation: latido 1s linear infinite alternate ;
+  -webkit-animation: latido 1s linear infinite alternate ;
+}
+
+#video-contenedor {  
+  position: relative;  
+  width: 650px;  
+  height: 500px;  
+  top: 50px;  
+  margin-top: 0px;  
+  margin-right: auto;  
+  margin-bottom: 0px;  
+  margin-left: auto;
+}
+#processing-contenedor {  
+  position: relative;  
+  width: 650px;  
+  height: 500px;  
+  top: 50px;  
+  margin-top: 0px;  
+  margin-right: auto;  
+  margin-bottom: 0px;  
+  margin-left: auto;
+  visibility:visible;
+}
+
+#esfinge:hover {  
+  border-bottom-style: none;
+}
+
+#esfinge:hover {  
+  border-top-style: none;
+}
+
+#esfinge:hover {  
+  border-right-style: none;
+}
+
+#esfinge:hover {  
+  border-left-style: none;
+}
+
+#titulo {  
+  font-size: xx-large;  
+  font-weight: bold;
+}
+
+#CierraVideo:hover {  
+  cursor: pointer;
+}
+
+</style> </head>
+  <body id="cuerpo" style="           height: 800px; background-color: #b9e8e8; display: inherit;">
+    <header id="titulo" style="text-align: center; font-family: cursive; margin-top: 16px;">
+      EL JUICIO DE OSIRIS </header>
+    <div id="geogebra-contenedor"> </div>
+    <div id="ayuda-contenedor">
+      <p>Aquí tendrá que ir todo el texto de ayuda del juego.....<img id="icono_cerrar"
+          style="width: 72px; height: 72px; top: 527px; left: 780px;" alt="cerrar"
+          src="img/icono_cerrar.png" onclick="cierra_ayuda();"></p>
+    </div>
+    <div style="height: 700px;" class="Contenedor" id="Contenedor1">
+      <div id="contenedor-papiro" class="fondo1" style="width: 1000px; left: 100px;">
+        <img alt="Esfinge" style="width: 166px; height: 105px; top: 455px; left: 4px;" src="./img/esfinge.png" id="esfinge"
+          onmouseover="playclip3()"><img style="top: -81px; left: 808px; width: 94px; height: 77px;"
+          id="piramide" alt="piramide" src="./img/piramide.png"><img
+          src="./img/papiro.png" id="papiro" height="428px" width="1000px"> <img
+          src="img/ojo.png" id="ojo" class="superpuestas" onmouseover="playclip1()">
+        <img style="top: 214px; left: 160px;" src="img/balanza.png" id="balanza"
+          class="superpuestas" onmouseover="playclip2()"> &nbsp; <img id="ayuda"
+          style="width: 78px; height: 79px; top: -84px; left: -85px;" alt="ayuda"
+          src="img/interrogacion.png" onclick="muestra_ayuda();"> <img id="cruz"
+          style="width: 176px; height: 117px; top: -89px; left: 935px;" alt=""
+          src=""> 
+        <div style="top: 450px; left: 179px; width: 823px; height: 115px;" id="comentario">Hola
+          amigos, bienvenidos al videojuego sobre el juicio de Osiris. <br>
+          Lo primero que tedrás que hacer es encontrar las tres primeras
+          pruebas. BUSCA EL OJO DE ORUS </div>
+      </div>
+    </div>
+    <div style="text-align: center;" id="video-contenedor"> <video id="video1"
+        controls="controls" width="650px"> <source src="video/intro.webm" type="video/webm; codecs="
+          vp8,="" vorbis=""> <source src="video/intro.mp4" type="video/mp4; codecs="
+          avc1.42e01e,="" mp4a.40.2=""> <source src="video/intro.ogg" type="video/ogg">
+      </video>
+    <img id="CierraVideo" style="width: 286px; height: 144px; top: -89px; left: 935px;" alt="play"
+          src="img/Play.png"> 
+         
+    </div>
+      <div style="text-align: center;" id="processing-contenedor">  
+     
+            <canvas id="myCanvas" data-processing-sources="./acertijos/camello.pde" width="200" height="200" style="align: center;"></canvas> 
+
+    </div>
+      <div id="game1"> </div>
+        
+    <!-- En el caso que existan niveles esto se utilizaría para acceder a tu nivel -->
+    <!-- Esta parte es la referente al video... -->
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" /> 
+		<title>Osiris</title>
+		<meta name="author" content="Mr Paradoja" />
+		<meta name="title" content="Osiris">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+		<script type="text/javascript" src="js/application.js"></script>
+	</head>
+	<body>
+		<container class="index-wrapper relative">
+			<img id="city"src="img/papiro.png"/>
+			
+			<div id="ojo" class="over absolute">
+				
+				<img src="img/ojo.png" class="relative"/>
+			</div>
+			<div id="balanza" class="over absolute">
+				
+				<img src="img/balanza.png" class="relative"/>
+			</div>
+			<div id="corazon" class="over absolute">
+				
+				<img src="img/corazon.png" class="relative"/>
+			</div>
+			<img id="btn-ovsicori-over" src="img/index/ovsicori-over.png" class="over absolute hide" />
+			<img id="btn-carlos-over" src="img/index/carlos-over.png" class="over absolute hide"/>
+			<img id="btn-colegio-over" src="img/index/colegio-over.png" class="over absolute hide"/>
+			<img id="btn-biblioteca-over" src="img/index/biblioteca-over.png" class="over absolute hide"/>
+			<div id="btn-ovsicori" class="hidden-button absolute"></div>
+			<div id="btn-carlos" class="hidden-button absolute"></div>
+			<div id="btn-colegio" class="hidden-button absolute"></div>
+			<div id="btn-biblioteca" class="hidden-button absolute"></div>
+
+			
+
+		</container>
+		<footer>
+			<span>Mr Paradoja</span>
+			<span id="timer" class="hidden"></span>
+		</footer>
+	</body>
+</html>
